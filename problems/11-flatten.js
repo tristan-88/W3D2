@@ -10,8 +10,17 @@ flatten([1, 2]); // [1, 2]
 flatten([1, [2, [3]]]); // [1, 2, 3]
 ***********************************************************************/
 
-// your code here
-  
+function flatten(array) {
+  let emptyArr = []
+
+  array.forEach(function (variables) {
+    if (Array.isArray(variables)) {
+      emptyArr.push(...flatten(variables))
+    } else { emptyArr.push(variables) }
+  })
+  return emptyArr
+}
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = flatten;

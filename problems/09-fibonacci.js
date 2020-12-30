@@ -18,13 +18,15 @@ fibonacci(3); // 2
 fibonacci(4); // 3
 fibonacci(10); // 55
 ***********************************************************************/
+function fibonacci(number) {
+  if (number === 1 || number === 2) return 1
 
-// your code here
-  
+  return fibonacci(number - 1) + fibonacci(number - 2)
+}
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = fibonacci;
 } catch (e) {
   module.exports = null;
 }
-  
