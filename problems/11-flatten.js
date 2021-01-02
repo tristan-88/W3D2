@@ -13,11 +13,12 @@ flatten([1, [2, [3]]]); // [1, 2, 3]
 function flatten(array) {
   let emptyArr = []
 
-  array.forEach(function (variables) {
-    if (Array.isArray(variables)) {
-      emptyArr.push(...flatten(variables))
-    } else { emptyArr.push(variables) }
-  })
+  array.forEach(
+    function (variables) {
+      if (Array.isArray(variables)) {
+        emptyArr.push(...flatten(variables))
+      } else { emptyArr.push(variables) }
+    })
   return emptyArr
 }
 

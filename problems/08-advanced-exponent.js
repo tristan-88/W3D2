@@ -41,7 +41,17 @@ times `advancedExponent` is being recursively called.
 
 
 function advancedExponent(b, n) {
-  // your code here
+  if (n === 0) return 1;
+  if (n === 1) return b;
+  if (n === 2) return 2 * b;
+
+  if (n % 2 === 0) {
+    const exp = advancedExponent(b, n / 2)
+    return exp * exp
+  } else {
+    const exp = advancedExponent(b, (n - 1) / 2)
+    return b * exp * exp
+  }
 }
 
 

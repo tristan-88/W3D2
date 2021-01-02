@@ -16,12 +16,15 @@ factorial(3); // 6
 factorial(5); // 120
 ***********************************************************************/
 
-// your code here
-  
+function factorial(number) {
+  if (number === 1) return 1
+  if (number === 0) return 0
+  return number * factorial(number - 1)
+}
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = factorial;
 } catch (e) {
   module.exports = null;
 }
-  
